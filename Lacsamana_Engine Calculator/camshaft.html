@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<style>html {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }</style>
+<title>Camshaft Timing Calculator</title>
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<h1>Camshaft Timing Calculator</h1>
+<div class="container">
+<label>Intake Valve Opening (BTDC): <input id="ivo" type="number"></label>
+<label>Intake Valve Closing (ABDC): <input id="ivc" type="number"></label>
+<label>Exhaust Valve Opening (BBDC): <input id="evo" type="number"></label>
+<label>Exhaust Valve Closing (ATDC): <input id="evc" type="number"></label>
+<button onclick="calcCamSpecs()">Calculate Cam Specs</button>
+<button onclick="clearCamInputs()" type="button">Clear</button>
+<button onclick="exportPDF()" type="button">Export PDF</button>
+<p id="result"></p>
+<div class="chart-center">
+  <canvas id="camProfileChart" width="800" height="400" style="background:#fff;max-width:100%;"></canvas>
+</div>
+<div class="info-modal" id="infoModal">
+  <h2>Camshaft Timing</h2>
+  <p>Camshaft timing is crucial for engine performance. It determines when the intake and exhaust valves open and close, affecting airflow and combustion efficiency.</p>
+  <p>Key terms:</p>
+  <ul>
+    <li><strong>IVO:</strong> Intake Valve Opening</li>
+    <li><strong>IVC:</strong> Intake Valve Closing</li>
+    <li><strong>EVO:</strong> Exhaust Valve Opening</li>
+    <li><strong>EVC:</strong> Exhaust Valve Closing</li>
+  </ul>
+<p><a href="index.html" class="back-button">← Back to home</a></p>
+
+
+</body>
+<script src="script.js"></script>
+<script src="camshaft.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</html>

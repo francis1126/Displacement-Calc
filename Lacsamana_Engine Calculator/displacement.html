@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<style>html {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }</style>
+<title>Engine Displacement Calculator</title>
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <h1>Engine Displacement Calculator</h1>
+  <div class="container">
+    <label>Bore (mm): <input id="bore" type="number"></label>
+    <label>Stroke (mm): <input id="stroke" type="number"></label>
+    <label>Cylinders: <input id="cylinders" type="number"></label>
+    <button onclick="calcDisplacement()">Calculate</button>
+    <button onclick="clearDisplacementInputs()" type="button" >Clear</button>
+    <button onclick="exportPDF()" type="button">Export PDF</button>
+    <p id="result"></p>
+   
+  <div class="info-modal" id="infoModal">
+    <h2>Engine Displacement</h2>
+    <p>Engine displacement is the total volume of all the cylinders in an engine. It is calculated using the formula:</p>
+    <p><strong>Displacement (cc) = π × (Bore/2)² × Stroke × Cylinders</strong></p>
+    <p><strong>Where:</strong></p>
+    <ul>
+      <li><strong>Bore:</strong> The diameter of the cylinder</li>
+      <li><strong>Stroke:</strong> The distance the piston travels within the cylinder</li>
+      <li><strong>Cylinders:</strong> The number of cylinders in the engine</li>
+    </ul>
+    <p>This formula gives the displacement in cubic centimeters (cc), which is a standard unit for measuring engine size.</p>
+    <p> <strong>Note: Bore and Stroke are typically measured in millimeters, that is why there is a /10 in my calculation to convert from centimeters to millimeters</strong></p>
+    <p>This value is crucial for understanding engine size and performance.</p>
+
+    <p><a href="index.html" class="back-button">← Back to home</a></p>
+  </div>
+</body>
+<script src="script.js"></script>
+<script src = "displacement.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</html>

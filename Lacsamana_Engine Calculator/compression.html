@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<style>html {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }</style>
+<title>Compression Ratio Calculator</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Compression Ratio Calculator</h1>
+  <div class="container">
+
+    <!-- Choose type -->
+    <label>Compression Type:
+      <select id="compType">
+        <option value="static">Static Compression</option>
+        <option value="dynamic">Dynamic Compression</option>
+      </select>
+    </label>
+
+    <!-- Static inputs -->
+    <div id="staticInputs">
+  <label>Engine displacement (cc): <input id="swept" type="number"></label>
+  <label>Engine volume at TDC (cc): <input id="tdcVolume" type="number"></label>
+  <label>Spark plug thread volume (cc): <input id="sparkThreadVol" type="number"></label>
+</div>
+
+    <!-- Dynamic inputs -->
+<div id="dynamicInputs" style="display:none;">
+  <label>Piston Diameter (Bore, mm): <input id="bore" type="number"></label>
+  <label>Stroke (mm): <input id="stroke" type="number"></label>
+  <label>Connecting Rod Length (mm): <input id="rodLength" type="number"></label>
+  <label>Chamber Volume at TDC (cc): <input id="chamberVolTDC" type="number"></label>
+  <label>Intake Valve Close Angle ABDC (°): <input id="ivc" type="number"></label>
+</div>
+<button onclick="calculateCR()">Calculate</button>
+    <button onclick="clearCompressionInputs()" type="button">Clear</button>
+    <button onclick="exportPDF()" type="button">Export PDF</button>
+    <p id="result"></p>
+    
+    <div class="info-modal" id="infoModal">
+      <h2>Compression Ratio</h2>
+      <p>The compression ratio is a measure of how much the air-fuel mixture is compressed in the engine cylinder before ignition. It is calculated as:</p>
+      <p><strong>CR = (Swept Volume + Clearance Volume) / Clearance Volume</strong></p>
+      <p>Where:</p>
+      <ul>
+        <li><strong>Swept Volume:</strong> The volume displaced by the piston as it moves from TDC to BDC.</li>
+        <li><strong>Clearance Volume:</strong> The volume of the combustion chamber when the piston is at TDC.</li>
+      </ul> 
+      <p><a href="index.html" class="back-button">← Back to home</a></p>
+    
+  </div>
+  
+  
+</body>
+<script src="script.js"></script>
+<script src="compression.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</html>

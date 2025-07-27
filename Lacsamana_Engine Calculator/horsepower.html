@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<style>html {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }</style>
+<title>Horsepower Calculator</title>
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1>Horsepower Calculator</h1>
+
+<div class="container">
+  <label>Torque (Nm): <input id="torque" type="number"></label>
+  <label>RPM: <input id="rpm" type="number"></label>
+  <button onclick="calcHp()">Calculate</button>
+  <button onclick="clearHorsepowerInputs()" type="button" >Clear</button>
+  <button onclick="exportPDF()" type="button">Export PDF</button>
+  <p id="result"></p>
+ 
+  <canvas id="hpChart" width="600" height="300" style="background:#fff;max-width:100%;margin-top:20px;"></canvas>
+  
+
+
+<div class="info-modal" id="infoModal">
+  <h2>Horsepower</h2>
+  <p>Horsepower is a measure of engine power. It can be calculated using the formula:</p>
+  <p><strong>Horsepower (HP) = (Torque × RPM) / 7127</strong></p>
+  <p>Where:</p>
+  <ul>
+    <li><strong>Torque:</strong> The rotational force produced by the engine.</li>
+    <li><strong>RPM:</strong> Revolutions per minute, indicating how fast the engine is spinning.</li>
+  </ul>
+  <p><a href="index.html" class="back-button">← Back to home</a></p>
+</div>
+<script src="script.js"></script>
+<script src="horsepower.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</body>
+</html>

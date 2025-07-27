@@ -1,0 +1,193 @@
+
+
+/* fonts */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #6dd5fa, #ffffff);
+  color: #333;
+  padding: 2rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* bg and font color when toggled */
+body.dark {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+/* h1 alignment, size and margin */
+h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* buttons alignment */
+nav {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* buttons design */
+nav a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: #007bff;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+nav a:hover {
+  background: #0056b3;
+}
+
+/* container size, bg, and transitions */
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
+}
+/* container color when dark mode is enabled */
+body.dark .container {
+  background: #1e1e1e;
+}
+
+label {
+  margin-top: 0.8rem;
+  display: block;
+  font-weight: 500;
+}
+
+/* fields */
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #fff;
+  color: #000;
+}
+/* fields in dark mode */
+body.dark input {
+  background: #333;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+/* drop down desgin in light mode */
+select#compType {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background: #f8f9fa;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"%3E%3Cpath fill="%23666" d="M2 0L0 2h4zM2 5L0 3h4z"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 0.65em;
+}
+select#compType:hover {
+  border-color: #007bff;
+}
+select#compType:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.25);
+  outline: none;
+}
+/* drop down design in dark mode */
+body.dark select#compType {
+  background: #333;
+  color: #eee;
+  border: 2px solid #555;
+}
+body.dark select#compType:hover {
+  border-color: #007bff;
+}
+body.dark select#compType:focus {
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.4);
+}
+
+/* button designs */
+button {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+button:hover {
+  background: #0056b3;
+}
+
+/* results design */
+p#result {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+  background: #e0f7fa;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+body.dark p#result {
+  background: #2a2a2a;
+}
+
+.small-button {
+  width: auto;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: #007bff;
+  border-radius: 6px; 
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.small-button:hover {
+  background: #0056b3;
+}
+/* back button design */
+.back-button {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  margin-top: 1rem;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background 0.3s;
+  text-align: center;
+}
+.back-button:hover {
+  background: #0056b3;
+}
+
+/* chart alignment */
+.chart-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+
+
